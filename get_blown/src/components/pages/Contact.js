@@ -1,5 +1,5 @@
 import {Typography} from '@material-ui/core'
 
 export default function Contact() {
-    return <Typography variant="h3">Contact</Typography>
+    return <p style={{color: 'white'}}>UNDER CONSTRUCTION</p>
 }

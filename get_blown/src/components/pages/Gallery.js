@@ -1,5 +1,5 @@
 import {Typography} from '@material-ui/core'
 
 export default function Gallery() {
-    return <Typography variant="h3">Gallery</Typography>
+    return <p style={{color: 'white'}}>UNDER CONSTRUCTION</p>
 }

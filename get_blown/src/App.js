@@ -33,13 +33,11 @@ const useStyles = makeStyles(() => ({
     fontFamily: 'Gochi Hand',
     fontSize: '1.2rem',
     color: "#F8E614",
-    textShadow: "1px 1px #F8E614"
-
+    textShadow: "0px 0px 2px #F8E614"
   }
 }))
 
 export default function App() {
-
 
   const history = useHistory();
   const location = useLocation()
