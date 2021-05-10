@@ -1,62 +1,112 @@
-import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
-import { Carousel } from '3d-react-carousal';
+import { Carousel } from "3d-react-carousal";
 
-// images
-import logo from '../../assets/logo-h.png'
-import car1 from '../../assets/car1.JPG';
-import car2 from '../../assets/car2.JPG';
-import car3 from '../../assets/car3.JPG';
-// import car4 from '../../assets/car4.png';
-// import car5 from '../../assets/car5.png';
+import hair1 from '../../assets/photos/hair/hair1.JPG';
+import hair2 from '../../assets/photos/hair/hair2.JPG';
+import hair3 from '../../assets/photos/hair/hair3.JPG';
+import hair4 from '../../assets/photos/hair/hair4.JPG';
+import hair5 from '../../assets/photos/hair/hair5.JPG';
+import hair6 from '../../assets/photos/hair/hair6.JPG';
+import hair7 from '../../assets/photos/hair/hair7.JPG';
+import hair8 from '../../assets/photos/hair/hair8.JPG';
+import hair9 from '../../assets/photos/hair/hair9.JPG';
+import hair10 from '../../assets/photos/hair/hair10.JPG';
+
 
 const useStyles = makeStyles(() => ({
-    home: {
-        display: 'flex',
-        flexFlow: 'column nowrap',
-        justifyContent: 'space-evenly',
-        alignItems: 'center'
-    },
-  logo: {
-    width: "100%",
+  home: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
   },
-  contact: {
-    fontFamily: 'Gochi Hand',
-    fontSize: '1.2rem',
-    color: '#24A8DF',
-    textAlign: 'center'
+  sloganContainer: {
+    width: '100%',
+    height: '18vh',
+    textAlign: 'center',
   },
-  contactCTA: {
-    fontFamily: 'Gochi Hand',
-    fontSize: '1.6rem',
-    color: '#24A8DF',
-    textAlign: 'center'
+  slogan1: {
+    fontSize: '1.7rem',
+    textAlign: "center",
+    color: "#FFFFFF",
+    textShadow: "0px 0px 5px #24A8DF",
+    letterSpacing: "0.15rem",
+    fontFamily: "Permanent Marker",
   },
-  contactLink: {
-    color: '#F8E614'
+    slogan2: {
+    fontSize: '2.2rem',
+    textAlign: "center",
+    color: "#FFFFFF",
+    textShadow: "0px 0px 5px #24A8DF",
+    letterSpacing: "0.15rem",
+    fontFamily: "Permanent Marker",
   },
   carouselContainer: {
-      height: '46vh',
+    height: "35vh",
+    fontSize: "2rem",
+    borderRadius: '2vh',
+  },
+  carouselImg: {
+    maxHeight: "35vh",
+    borderRadius: '2vh',
+    border: '2px solid white',
+    background: 'white',
+  },
+  contactContainer: {
+    display: 'flex',
+    flexFlow: 'column nowrap',
+    justifyContent: 'flex-start',
+    height: '10vh',
+    zIndex: '1',
+  },
+  contact: {
+    fontFamily: "Gochi Hand",
+    fontSize: "1.2rem",
+    color: "#24A8DF",
+    textAlign: "center",
+    textDecoration: 'none'
+  },
+  contactCTA: {
+    fontFamily: "Gochi Hand",
+    fontSize: "1.8rem",
+    textAlign: "center",
+    color: "#F8E614"
+  },
+  contactLink: {
+    color: "#FFFFFF",
+    textShadow: "0px 0px 5px #24A8DF",
+    fontSize: '2.6rem',
+    letterSpacing: '0.1rem',
+    textDecoration: 'none',
+  },
+  socials: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    width: '100%',
+    height: '5vh',
+  },
+  socialBtn: {
+    maxHeight: '5vh',
+    maxWidth: '10vw',
   }
 }));
 
 export default function Home() {
   const classes = useStyles();
-  let slides = [
-      <img src={car1} alt='1' />,
-      <img src={car2} alt='2' />,
-      <img src={car3} alt='3' />,
-    // <img src={car4} alt='4' />,
-    // <img src={car5} alt='5' />
-  ]
+  let slides = [hair1, hair2, hair3, hair4, hair5, hair6, hair7, hair8, hair9, hair10]
   return (
-    <div>
-      <img className={classes.logo} src={logo} />
+    <div className={classes.home}>
+            <h3 className={classes.contactCTA}>
+        <a className={classes.contactLink} href="tel:+61370202496">
+          CALL NOW
+        </a><br />
+        for a free phone consultation
+      </h3>
+
       <div className={classes.carouselContainer}>
-      <Carousel slides={slides} autoplay={true} interval={3000} />
-          </div>
-      <h3 className={classes.contact}>Unit 3, 91 Albert St, Preston</h3>
-      <h3 className={classes.contactCTA}><a className={classes.contactLink} href="tel:+61370202496">CALL NOW</a> to make a booking</h3>
+        <Carousel slides={slides} autoplay={true} interval={3000} arrows={true} arrowBorders={false}/>
+      </div>
+      
     </div>
   );
 }
