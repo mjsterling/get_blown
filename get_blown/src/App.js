@@ -1,13 +1,14 @@
 import logo from "./assets/logo-h.png";
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import { makeStyles, Button, Typography } from "@material-ui/core";
+import { makeStyles, Button } from "@material-ui/core";
 import { useHistory, useLocation, Route } from "react-router-dom";
 
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Gallery from "./components/pages/Gallery";
 import Contact from "./components/pages/Contact";
+import GalleryImage from "./components/pages/Image"
 
 
 import fblogo from "./assets/fblogo.png";
@@ -115,7 +116,7 @@ export default function App() {
   return (
     <div className={classes.container}>
       <div className={classes.header}>
-      <img className={classes.logo} src={logo} />
+      <img className={classes.logo} src={logo} alt="logo"/>
       <div className={classes.navbar}>
         <Button
           className={
@@ -137,7 +138,7 @@ export default function App() {
         </Button>
         <Button
           className={
-            location.pathname === "/gallery"
+            location.pathname.match(/gallery|image/)
               ? classes.navBtnCurrent
               : classes.navBtn
           }
@@ -162,6 +163,7 @@ export default function App() {
         <Route path="/about" component={About} />
         <Route path="/gallery" component={Gallery} />
         <Route path="/contact" component={Contact} />
+        <Route path="/image/:id" component={GalleryImage} />
       </div>
       <div className={classes.contactContainer}>
       <h3 className={classes.contact}><a className={classes.contact} href="tel:+61370202496">(03) 7020-2496</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

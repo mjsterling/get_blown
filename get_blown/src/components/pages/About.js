@@ -1,8 +1,8 @@
-import {Typography, makeStyles } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles(() => ({
     about: {
-        color: '#24A8DF',
+        color: '#FFFFFF',
         textAlign: 'justify',
         maxWidth: '80%',
         padding: '2% 5%',
