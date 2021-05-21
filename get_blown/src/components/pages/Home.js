@@ -118,7 +118,7 @@ export default function Home() {
           slides={slides}
           autoplay={true}
           interval={3000}
-          arrows={true}
+          arrows={false}
           arrowBorders={false}
         />
       </div>

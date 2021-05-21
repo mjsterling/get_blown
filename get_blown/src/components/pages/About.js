@@ -4,11 +4,11 @@ const useStyles = makeStyles(() => ({
     about: {
         color: '#FFFFFF',
         textAlign: 'justify',
-        maxWidth: '80%',
+        maxWidth: '800px',
         padding: '2% 5%',
         fontFamily: 'Open Sans, sans-serif',
         height: '58vh',
-        margin: '0 5%',
+        margin: '0 auto',
         overflow: 'scroll',
     },
     serviceLI: {

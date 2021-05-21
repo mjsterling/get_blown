@@ -37,7 +37,7 @@ const useStyles = makeStyles(() => ({
   },
   logo: {
     maxWidth: '70vw',
-    maxHeight: '20vh',
+    maxHeight: '15vh',
   },
   navbar: {
     height: "6vh",

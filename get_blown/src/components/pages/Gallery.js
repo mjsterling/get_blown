@@ -171,6 +171,8 @@ const useStyles = makeStyles(() => ({
     flexFlow: "row wrap",
     overflow: "scroll",
     height: '60vh',
+    maxWidth: "800px",
+    margin: "0 auto",
   },
   galleryThumbnail: {
     width: "100px",

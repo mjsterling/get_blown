@@ -12,11 +12,12 @@ const useStyles = makeStyles(() => ({
     maxWidth: "50%",
     maxHeight: "40%",
     borderRadius: "2vh",
+    cursor: "pointer",
   },
   hoursContainer: {
     display: "flex",
-    flexFlow: "column wrap",
-    justifyContent: "flex-start",
+    flexFlow: "row wrap",
+    justifyContent: "space-evenly",
     alignItems: "center",
     alignContent: "space-evenly",
     height: "23vh",
@@ -27,6 +28,12 @@ const useStyles = makeStyles(() => ({
     textAlign: "center",
     color: "#FFFFFF",
   },
+  address: {
+    fontFamily: "Gochi Hand",
+    textAlign: "center",
+    color: "#FFFFFF",
+    marginBottom: "3vh",
+  }
 }));
 
 export default function Contact() {
@@ -39,12 +46,11 @@ export default function Contact() {
         className={classes.mapImg}
       />
       <h3
-        className={classes.info}
+        className={classes.address}
         onClick={() => window.open("https://g.page/gbhstyling?share")}
       >
         Unit 3, 91 Albert St, Preston
       </h3>
-      <div>
       <div className={classes.hoursContainer}>
         <p className={classes.info}>Mon 10am–7:30pm</p>
 
@@ -57,8 +63,8 @@ export default function Contact() {
         <p className={classes.info}>Fri 10am–8:30pm</p>
 
         <p className={classes.info}>Sat 9:30am–6:30pm</p>
-      </div>
-      <p className={classes.info}>Sun 11am–4pm</p>
+
+        <p className={classes.info}>Sun 11am–4pm</p>
       </div>
     </div>
   );
